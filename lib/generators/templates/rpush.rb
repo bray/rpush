@@ -26,6 +26,9 @@
   # Define a custom logger.
   # config.logger = MyLogger.new
 
+  # Set ActiveRecord logger to Rpush.logger.
+  # config.intercept_active_record_logger = false
+
  end
 
 Rpush.reflect do |on|

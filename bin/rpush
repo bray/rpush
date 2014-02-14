@@ -33,4 +33,6 @@ load 'config/initializers/rpush.rb' if File.exist?('config/initializers/rpush.rb
 
 Rpush.config.update(config)
 Rpush.require_for_daemon
+ActiveRecord::Base.logger = Rpush.logger if Rpush.config.intercept_active_record_logger
+
 Rpush::Daemon.start
